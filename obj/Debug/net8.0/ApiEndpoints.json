@@ -1,8 +1,24 @@
 [
   {
     "ContainingType": "APIGenerationProject.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "APIGenerationProject.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIGenerationProject.Controllers.AccountController",
     "Method": "Registeration",
-    "RelativePath": "api/Account",
+    "RelativePath": "api/Account/Register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
