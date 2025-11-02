@@ -1,7 +1,9 @@
 using APIGenerationProject.Context;
 using APIGenerationProject.GenericRepository;
+using APIGenerationProject.Models.Model;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
@@ -19,6 +21,11 @@ namespace APIGenerationProject
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // ? Register all Generic Repositories
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+     .AddEntityFrameworkStores<ProjectContext>();
+     
+
+
             builder.Services.AddScoped<GenericRepository<Catogery>>();
             builder.Services.AddScoped<GenericRepository<Product>>();
             builder.Services.AddScoped<GenericRepository<Order>>();

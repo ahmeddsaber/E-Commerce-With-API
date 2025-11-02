@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "APIGenerationProject.Controllers.AccountController",
+    "Method": "Registeration",
+    "RelativePath": "api/Account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDTO",
+        "Type": "APIGenerationProject.DTOs.AccountDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "APIGenerationProject.Controllers.CartController",
     "Method": "GetAllCarts",
     "RelativePath": "api/Cart",
