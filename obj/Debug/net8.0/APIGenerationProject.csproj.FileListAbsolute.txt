@@ -143,3 +143,10 @@ D:\MVCProjects\APIGenerationProject\APIGenerationProject\obj\Debug\net8.0\refint
 D:\MVCProjects\APIGenerationProject\APIGenerationProject\obj\Debug\net8.0\APIGenerationProject.pdb
 D:\MVCProjects\APIGenerationProject\APIGenerationProject\obj\Debug\net8.0\APIGenerationProject.genruntimeconfig.cache
 D:\MVCProjects\APIGenerationProject\APIGenerationProject\obj\Debug\net8.0\ref\APIGenerationProject.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\MVCProjects\APIGenerationProject\APIGenerationProject\obj\Debug\net8.0\APIGenerationProject.sourcelink.json

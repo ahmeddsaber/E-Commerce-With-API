@@ -1,9 +1,11 @@
-﻿using APIGenerationProject.Repository.Model;
+﻿using APIGenerationProject.Models.Model;
+using APIGenerationProject.Repository.Model;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIGenerationProject.Context
 {
-    public class ProjectContext : DbContext
+    public class ProjectContext : IdentityDbContext<ApplicationUser>
     {
         public ProjectContext(DbContextOptions<ProjectContext> options) : base(options) { }
 

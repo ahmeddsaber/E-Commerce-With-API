@@ -1,6 +1,8 @@
-﻿namespace APIGenerationProject.Models.Model
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace APIGenerationProject.Models.Model
 {
-    public class ApplicationUser
+    public class ApplicationUser:IdentityUser
     {
     }
 }
