@@ -1,10 +1,12 @@
 ﻿using APIGenerationProject.DTOs;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIGenerationProject.Controllers
 {
+ 
     [ApiController]
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
@@ -53,7 +55,7 @@ namespace APIGenerationProject.Controllers
             return Ok(proDTO);
         }
 
-        [HttpPost]
+   
         [HttpPost]
         public IActionResult AddOrderItem(OrderItem item)
         {

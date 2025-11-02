@@ -1,10 +1,12 @@
 ﻿using APIGenerationProject.DTOs;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIGenerationProject.Controllers
 {
+   
     [ApiController]
     [Route("api/[controller]")]
     public class CartItemController : ControllerBase
@@ -16,7 +18,7 @@ namespace APIGenerationProject.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        // ✅ Get all cart items
+        //  Get all cart items
         [HttpGet]
         public IActionResult GetAllCartItems()
         {
@@ -24,7 +26,7 @@ namespace APIGenerationProject.Controllers
             return Ok(cartItems);
         }
 
-        // ✅ Get cart item by ID
+        // Get cart item by ID
         [HttpGet("{id}")]
         public IActionResult GetCartItemById(int id)
         {
@@ -35,8 +37,8 @@ namespace APIGenerationProject.Controllers
             return Ok(cartItem);
         }
 
-        // ✅ Add new cart item
-        // إضافة CartItem جديد في Controller
+        //  Add new cart item
+        // 
         [HttpPost]
         public IActionResult AddCartItem(CartItemDTO cartItemDto)
         {
@@ -60,7 +62,7 @@ namespace APIGenerationProject.Controllers
         }
 
 
-        // ✅ Update existing cart item
+        // Update existing cart item
         [HttpPut("{id}")]
         public IActionResult UpdateCartItem(int id, CartItem item)
         {
@@ -74,7 +76,7 @@ namespace APIGenerationProject.Controllers
             return Ok(item);
         }
 
-        // ✅ Delete cart item
+        // Delete cart item
         [HttpDelete("{id}")]
         public IActionResult DeleteCartItem(int id)
         {

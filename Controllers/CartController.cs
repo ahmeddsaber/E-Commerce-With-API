@@ -1,11 +1,13 @@
 ﻿using APIGenerationProject.DTOs;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace APIGenerationProject.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class CartController : ControllerBase

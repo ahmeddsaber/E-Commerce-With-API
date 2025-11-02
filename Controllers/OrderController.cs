@@ -1,11 +1,12 @@
 ﻿using APIGenerationProject.DTOs;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace APIGenerationProject.Controllers
-{
+{    [Authorize ("Admin")]
     [ApiController]
     [Route("api/[controller]")]
     public class OrderController : ControllerBase

@@ -1,11 +1,13 @@
 ﻿using APIGenerationProject.DTOs;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace APIGenerationProject.Controllers
 {
+    [Authorize("Admin")]
     [ApiController]
     [Route("api/[controller]")]
     public class OrderItemController : ControllerBase
@@ -69,7 +71,7 @@ namespace APIGenerationProject.Controllers
             _unitOfWork.OrderItemRepo.Add(item);
             _unitOfWork.Save();
 
-            // نرجع الـ DTO مع Id الجديد
+
             itemDto.Id = item.Id;
             return Ok(itemDto);
         }

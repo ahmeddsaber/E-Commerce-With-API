@@ -1,10 +1,12 @@
 ﻿using APIGenerationProject.DTOs;
 using APIGenerationProject.Repository.Model;
 using APIGenerationProject.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIGenerationProject.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class CatogeryController : ControllerBase 
@@ -30,7 +32,7 @@ namespace APIGenerationProject.Controllers
             return Ok(categories);
         }
 
-        // ✅ GET: api/Catogery/5
+        // GET: api/Catogery/5
         [HttpGet("{id}")]
         public IActionResult ShowCatogery(int id)
         {
@@ -49,8 +51,9 @@ namespace APIGenerationProject.Controllers
             return Ok(categoryDTO);
         }
 
-        // ✅ POST: api/Catogery
+
         [HttpPost]
+        [Authorize("Admin")]
         public IActionResult Add(CreateCatogeryDTO createCatogeryDTO)
         {
             var newCategory = new Catogery
@@ -60,11 +63,11 @@ namespace APIGenerationProject.Controllers
             };
 
             unitOfWork.CatogeryRepo.Add(newCategory);
-            unitOfWork.CatogeryRepo.Save(); // ✅ نسيت تحفظ
+            unitOfWork.CatogeryRepo.Save();
             return Ok(newCategory);
         }
 
-        // ✅ PUT: api/Catogery/5
+        [Authorize("Admin")]
         [HttpPut("{id}")]
         public IActionResult Update(int id, CatogeryDTO catogeryDTO)
         {
@@ -86,6 +89,7 @@ namespace APIGenerationProject.Controllers
 
    
         [HttpDelete("{id}")]
+        [Authorize("Admin")]
         public IActionResult Delete(int id)
         {
             var existing = unitOfWork.CatogeryRepo.GetOne(id);
